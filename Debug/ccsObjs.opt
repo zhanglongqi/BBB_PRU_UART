@@ -1,1 +1,0 @@
-"./PRU_Hardware_UART.obj" "./uart_irda_cir.obj" "../link.cmd" -l"libc.a" 
