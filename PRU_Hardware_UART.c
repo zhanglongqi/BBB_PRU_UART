@@ -138,6 +138,14 @@ void main() {
 
 	char NewLine[] = { 0x0A, 0x0D, 0x00 };
 
+
+	/* enable ocp wide access */
+	__asm__ __volatile__
+            (
+            " LBCO &r0, C4, 4, 4 \n"
+            " CLR r0, r0, 4 \n"
+            " SBCO &r0, C4, 4, 4 \n"
+            );
 	/*** INITIALIZATION ***/
 	UARTPinMuxSetup(0);
 
